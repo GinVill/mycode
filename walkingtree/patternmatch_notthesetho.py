@@ -11,7 +11,9 @@ EXCLUDE = ["/usr", "/home", "/var"] ## Dont search in these locations
 
 def find(pattern, path):
     """search through filesystem based on given path location"""
-    result = []
+    result = [] #establishes list for results
+    # os.walk yields a tuple so is passed 3 variables (root, dirs, files)
+    # for dirpath, dirnames and filenames
     for root, dirs, files in os.walk(path, topdown=True):
         if root in EXCLUDE: # if the root matches the exclude list
             dirs[:] = [] # remove the directory list for this iteration
