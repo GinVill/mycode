@@ -13,7 +13,7 @@ def main():
         print(f"{pokeChoice} has been in {gameCount} games.")        
         picURL = wget.download(pokeapi["sprites"]["front_default"])
         print(pokeapi["sprites"]["front_default"])
-        #open(f"{pokeChoice}.txt", "wb").write(picURL.content)      
+        open(f"/home/student/static/{pokeChoice}.txt", "wb").write(picURL.content)      
         for move in pokeapi["moves"]:
             pokeMoves = []
             pokeMoves.append(move['move']['name'])
