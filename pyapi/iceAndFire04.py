@@ -17,6 +17,13 @@ def main():
     #Decode the JSON returned and use Pretty Print to make it legible
     got_dj = gotresp.json()
     pprint.pprint(got_dj)
+    
+    allegiances = got_dj['allegiances']['name']
+    print(allegiances)
+
+    books = got_dj['books']['name']
+    print(books)
+
 
 if __name__ == '__main__':
     main()
