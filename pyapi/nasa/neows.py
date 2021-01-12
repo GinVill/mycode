@@ -25,7 +25,19 @@ def main():
     neodata = neowrequest.json()
 
     # display NASA's NEOW data
-    print(neodata)
+    #Create a list of dates
+    dates = []
+    for x in neodata['near_earth_objects']:
+        dates.append(x)
+    print(dates)
+
+    for x in dates:
+        for asteroidInDict in neodata['near_earth_objects'][x]:
+            asteroidInDict['estimated_diameter']['miles']['estimated_diameter_max']
+    
+    """In the range specified, which is the largest asteroid?
+        In the range specified, how many asteroids are labeled "Potentially Hazardous"
+        What are the names of these 'fatal' asteroids? """
 
 if __name__ == '__main__':
     main()

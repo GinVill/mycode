@@ -29,5 +29,12 @@ def main():
 
     print(apod['url'])
 
+    # In the range specified, which is the largest asteroid?
+    dates =[]
+    # loop across each key in near_earth_objects
+    for dictionary in apod['near_earth_object']:
+        print(dictionary.keys())
+    print(apod)
+
 if __name__ == '__main__':
     main()
