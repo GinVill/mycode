@@ -15,16 +15,16 @@ def byName(x):
 def byYear(y):
     return y[1]
 
-def byVendorYear(z):
-    z = vendor_name_cg
-    z = vendor_name_year_cg
-    return z
+def byIP(z):
+    return z[2]
 
 vendor_name_cg = sorted(company_gear, key=byName)
 
 vendor_name_year_cg = sorted(vendor_name_cg, key=byYear)
 
-vendor_reverseSort_cg = sorted(vendory_name_year_cg, reverse=True)
+vendor_reverseSort_cg = sorted(vendor_name_year_cg, key=byYear, reverse=True)
+
+vendor_ip_low_high = sorted(vendor_name_cg, key=byIP)
 
 print('\nThe list company_gear looks like: ', company_gear)
 
@@ -32,5 +32,6 @@ print('\nResult of sorted(company_gear, key=byUserName): ' + str(vendor_name_cg)
 
 print('\nResult of sorted(vendor_name_cg, key=byYear): ' + str(vendor_name_year_cg))
 
-print(vendor_reverseSort_cg)
+print('\nResult of reverse sort by vendor then year in descending order: ' + str(vendor_reverseSort_cg))
 
+print('\nResult of sorted by vendor then IP address: ' + str(vendor_ip_low_high))

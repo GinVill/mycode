@@ -7,7 +7,7 @@ import random
 def showInstructions():
   #print a main menu and the commands
   print('''
-RPG Game
+Smarter or Stronger Challenge 
 ==========================================
 In life, you have to be smart or strong.
 As you navigate through the game, you 
@@ -18,6 +18,7 @@ inventory and beat the monster
 Commands:
   go [direction]
   get [math] or get [exercise]
+  q to quit
 ''')
 
 
@@ -48,7 +49,7 @@ rooms = {
 
             'Kitchen' : {
                   'north' : 'Hall',
-                  #'item'  : 'monster',
+                  'item'  : 'monster',
                 },
             'Dining Room' : {
                   'west' : 'Hall',
